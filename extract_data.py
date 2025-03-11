@@ -45,19 +45,100 @@ def write_to_target_sheet(service, data):
             range='Sheet1!A:Z'
         ).execute()
 
-        # Prepare data for writing
+        # Clean and prepare data for writing
+        data = data.fillna('')
+        numeric_columns = ['Context Awareness', 'Autonomy', 'Experience', 
+                         'Output Quality', 'Overall Rating', 'Mean Rating', 'Difference']
+        
+        # Safely convert numeric columns
+        for col in numeric_columns:
+            if col in data.columns:
+                data[col] = data[col].apply(
+                    lambda x: round(float(x), 2) if pd.notnull(x) and str(x).strip() != '' else ''
+                )
+
+        # Convert DataFrame to list of lists
         headers = list(data.columns)
         values = [headers] + data.values.tolist()
         
+        # Convert all values to strings, handling empty values
+        values = [[str(cell) if cell != '' else '' for cell in row] for row in values]
+        
         logger.info("Writing data to target sheet")
+        # Write the data
         service.spreadsheets().values().update(
             spreadsheetId=TARGET_SPREADSHEET_ID,
             range='Sheet1!A1',
             valueInputOption='RAW',
             body={'values': values}
         ).execute()
+
+        # Get the last column letter for the range
+        last_column = chr(ord('A') + len(headers) - 1)
         
-        logger.info("Successfully wrote data to target sheet")
+        # Find the Result column index (0-based)
+        result_col_idx = headers.index('Result')
+        result_col_letter = chr(ord('A') + result_col_idx)
+        
+        # Apply conditional formatting
+        requests = [{
+            'addConditionalFormatRule': {
+                'rule': {
+                    'ranges': [{
+                        'sheetId': 0,
+                        'startColumnIndex': result_col_idx,
+                        'endColumnIndex': result_col_idx + 1,
+                        'startRowIndex': 1  # Skip header row
+                    }],
+                    'booleanRule': {
+                        'condition': {
+                            'type': 'TEXT_EQ',
+                            'values': [{'userEnteredValue': 'Ok'}]
+                        },
+                        'format': {
+                            'backgroundColor': {
+                                'red': 0.7176,
+                                'green': 0.8823,
+                                'blue': 0.7176
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            'addConditionalFormatRule': {
+                'rule': {
+                    'ranges': [{
+                        'sheetId': 0,
+                        'startColumnIndex': result_col_idx,
+                        'endColumnIndex': result_col_idx + 1,
+                        'startRowIndex': 1  # Skip header row
+                    }],
+                    'booleanRule': {
+                        'condition': {
+                            'type': 'TEXT_EQ',
+                            'values': [{'userEnteredValue': 'Not ok'}]
+                        },
+                        'format': {
+                            'backgroundColor': {
+                                'red': 0.9568,
+                                'green': 0.7176,
+                                'blue': 0.7176
+                            }
+                        }
+                    }
+                }
+            }
+        }]
+
+        # Apply the formatting
+        service.spreadsheets().batchUpdate(
+            spreadsheetId=TARGET_SPREADSHEET_ID,
+            body={'requests': requests}
+        ).execute()
+        
+        logger.info("Successfully wrote data and applied formatting to target sheet")
         return True
         
     except Exception as e:

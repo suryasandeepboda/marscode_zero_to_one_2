@@ -368,3 +368,174 @@ Traceback (most recent call last):
     raise KeyError(key) from err
 KeyError: 'Result'
 2025-03-11 22:48:20,396 - ERROR - Failed to extract data
+2025-03-11 22:58:25,852 - INFO - Starting script execution
+2025-03-11 22:58:25,852 - INFO - Starting data extraction process
+2025-03-11 22:58:25,852 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:58:25,854 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:58:25,855 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:58:25,856 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:58:31,868 - INFO - Successfully retrieved 145 rows of data
+2025-03-11 22:58:31,872 - INFO - Created DataFrame with shape: (144, 83)
+2025-03-11 22:58:31,872 - INFO - Available columns in DataFrame: ['Timestamp', 'Email Address', 'Tool being used', 'Feature used', 'Task Objective', 'Repository Link', 'Repository: Public/Private', 'Repository: Lines of Code', '[Turn 1]: Prompt Category', '[Turn 1]: Prompt', '[Turn 1]: Model Response', '[Turn 1]: Model Response - File [Use only when response is too long]', '[Turn 1]: Observations', '[Turn 1]: Screenshots', '[Turn 2]: Prompt Category', '[Turn 2]: Prompt', '[Turn 2]: Model Response', '[Turn 2]: Model Response - File [Use only when response is too long]', '[Turn 2]: Observations', '[Turn 2]: Screenshot', '[Turn 3]: Prompt Category', '[Turn 3]: Prompt', '[Turn 3]: Model Response', '[Turn 3]: Model Response - File [Use only when response is too long]', '[Turn 3]: Observations', '[Turn 3]: Screenshot', '[Turn 4]: Prompt Category', '[Turn 4]: Prompt', '[Turn 4]: Model Response', '[Turn 4]: Model Response - File [Use only when response is too long]', '[Turn 4]: Observations', '[Turn 4]: Screenshot', '[Turn 5]: Prompt Category', '[Turn 5]: Prompt', '[Turn 5]: Model Response', '[Turn 5]: Model Response - File [Use only when response is too long]', '[Turn 5]: Observations', '[Turn 5]: Screenshot', '[Turn 6]: Prompt Category', '[Turn 6]: Prompt', '[Turn 6]: Model Response', '[Turn 6]: Model Response - File [Use only when response is too long]', '[Turn 6]: Observations', '[Turn 6]: Screenshot', '[Turn 7]: Prompt Category', '[Turn 7]: Prompt', '[Turn 7]: Model Response', '[Turn 7]: Model Response - File [Use only when response is too long]', '[Turn 7]: Observations', '[Turn 7]: Screenshot', 'Context Awareness', 'Context Awareness: Errors', 'Rationale for Context Awareness', 'Output Quality', 'Output Quality: Errors', 'Rationale for Output Quality', 'Autonomy', 'Autonomy: Errors', 'Rationale for Autonomy', 'Iteration Size and Speed', 'Iteration Size and Speed: Errors', 'Rationale for Iteration Size and Speed', 'Experience', 'Experience - Flexibility, Ease of Use and Reliability: Errors', 'Rationale for Experience', 'Loom Recording Link', 'Overall Rating', 'Rationale behind the overall rating', '[Turn 1]: Final Turn?', '[Turn 2]: Final Turn?', '[Turn 3]: Final Turn?', '[Turn 4]: Final Turn?', '[Turn 5]: Final Turn?', '[Turn 6]: Final Turn?', '[Turn 7]: Final Turn?', '[Turn 1]: Turn ID', '[Turn 2]: Turn ID', '[Turn 3]: Turn ID', '[Turn 4]: Turn ID', '[Turn 5]: Turn ID', '[Turn 6]: Turn ID', '[Turn 7]: Turn ID', 'Unique ID']
+2025-03-11 22:58:31,875 - INFO - Filtered DataFrame created with 144 rows and 9 columns
+2025-03-11 22:58:31,876 - INFO - Converted Context Awareness to numeric values
+2025-03-11 22:58:31,879 - INFO - Converted Autonomy to numeric values
+2025-03-11 22:58:31,880 - INFO - Converted Experience to numeric values
+2025-03-11 22:58:31,881 - INFO - Converted Output Quality to numeric values
+2025-03-11 22:58:31,883 - INFO - Converted Overall Rating to numeric values
+2025-03-11 22:58:31,883 - INFO - Calculating mean rating using metrics: ['Context Awareness', 'Autonomy', 'Experience', 'Output Quality']
+2025-03-11 22:58:31,885 - INFO - Mean Rating statistics: 
+count     143.0
+unique     17.0
+top         3.0
+freq       20.0
+Name: Mean Rating, dtype: float64
+2025-03-11 22:58:31,886 - INFO - Difference statistics: 
+count     143.0
+unique     10.0
+top         0.0
+freq       49.0
+Name: Difference, dtype: float64
+2025-03-11 22:58:31,886 - INFO - Added Result status based on difference criteria
+2025-03-11 22:58:31,887 - INFO - Result distribution: 
+Result
+Ok        142
+Not ok      2
+Name: count, dtype: int64
+2025-03-11 22:58:31,887 - INFO - Data extraction completed successfully
+2025-03-11 22:58:31,887 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:58:31,889 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:58:31,896 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:58:31,896 - INFO - Clearing existing data from target sheet
+2025-03-11 22:58:33,587 - INFO - Writing data to target sheet
+2025-03-11 22:58:34,030 - ERROR - Failed to write to target sheet: <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1FEqiDqqPfb9YHAWBiqVepmmXj22zNqXNNI7NLGCDVak/values/Sheet1%21A1?valueInputOption=RAW&alt=json returned "Invalid JSON payload received. Unexpected token.
+"Ok"], ["", "", "", NaN, NaN, NaN, NaN, 
+                    ^". Details: "Invalid JSON payload received. Unexpected token.
+"Ok"], ["", "", "", NaN, NaN, NaN, NaN, 
+                    ^">
+2025-03-11 22:58:34,031 - ERROR - Failed to write to target sheet
+2025-03-11 22:59:52,338 - INFO - Starting script execution
+2025-03-11 22:59:52,339 - INFO - Starting data extraction process
+2025-03-11 22:59:52,339 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:59:52,340 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:59:52,342 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:59:52,342 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:59:54,792 - INFO - Successfully retrieved 145 rows of data
+2025-03-11 22:59:54,797 - INFO - Created DataFrame with shape: (144, 83)
+2025-03-11 22:59:54,797 - INFO - Available columns in DataFrame: ['Timestamp', 'Email Address', 'Tool being used', 'Feature used', 'Task Objective', 'Repository Link', 'Repository: Public/Private', 'Repository: Lines of Code', '[Turn 1]: Prompt Category', '[Turn 1]: Prompt', '[Turn 1]: Model Response', '[Turn 1]: Model Response - File [Use only when response is too long]', '[Turn 1]: Observations', '[Turn 1]: Screenshots', '[Turn 2]: Prompt Category', '[Turn 2]: Prompt', '[Turn 2]: Model Response', '[Turn 2]: Model Response - File [Use only when response is too long]', '[Turn 2]: Observations', '[Turn 2]: Screenshot', '[Turn 3]: Prompt Category', '[Turn 3]: Prompt', '[Turn 3]: Model Response', '[Turn 3]: Model Response - File [Use only when response is too long]', '[Turn 3]: Observations', '[Turn 3]: Screenshot', '[Turn 4]: Prompt Category', '[Turn 4]: Prompt', '[Turn 4]: Model Response', '[Turn 4]: Model Response - File [Use only when response is too long]', '[Turn 4]: Observations', '[Turn 4]: Screenshot', '[Turn 5]: Prompt Category', '[Turn 5]: Prompt', '[Turn 5]: Model Response', '[Turn 5]: Model Response - File [Use only when response is too long]', '[Turn 5]: Observations', '[Turn 5]: Screenshot', '[Turn 6]: Prompt Category', '[Turn 6]: Prompt', '[Turn 6]: Model Response', '[Turn 6]: Model Response - File [Use only when response is too long]', '[Turn 6]: Observations', '[Turn 6]: Screenshot', '[Turn 7]: Prompt Category', '[Turn 7]: Prompt', '[Turn 7]: Model Response', '[Turn 7]: Model Response - File [Use only when response is too long]', '[Turn 7]: Observations', '[Turn 7]: Screenshot', 'Context Awareness', 'Context Awareness: Errors', 'Rationale for Context Awareness', 'Output Quality', 'Output Quality: Errors', 'Rationale for Output Quality', 'Autonomy', 'Autonomy: Errors', 'Rationale for Autonomy', 'Iteration Size and Speed', 'Iteration Size and Speed: Errors', 'Rationale for Iteration Size and Speed', 'Experience', 'Experience - Flexibility, Ease of Use and Reliability: Errors', 'Rationale for Experience', 'Loom Recording Link', 'Overall Rating', 'Rationale behind the overall rating', '[Turn 1]: Final Turn?', '[Turn 2]: Final Turn?', '[Turn 3]: Final Turn?', '[Turn 4]: Final Turn?', '[Turn 5]: Final Turn?', '[Turn 6]: Final Turn?', '[Turn 7]: Final Turn?', '[Turn 1]: Turn ID', '[Turn 2]: Turn ID', '[Turn 3]: Turn ID', '[Turn 4]: Turn ID', '[Turn 5]: Turn ID', '[Turn 6]: Turn ID', '[Turn 7]: Turn ID', 'Unique ID']
+2025-03-11 22:59:54,801 - INFO - Filtered DataFrame created with 144 rows and 9 columns
+2025-03-11 22:59:54,802 - INFO - Converted Context Awareness to numeric values
+2025-03-11 22:59:54,805 - INFO - Converted Autonomy to numeric values
+2025-03-11 22:59:54,806 - INFO - Converted Experience to numeric values
+2025-03-11 22:59:54,807 - INFO - Converted Output Quality to numeric values
+2025-03-11 22:59:54,808 - INFO - Converted Overall Rating to numeric values
+2025-03-11 22:59:54,809 - INFO - Calculating mean rating using metrics: ['Context Awareness', 'Autonomy', 'Experience', 'Output Quality']
+2025-03-11 22:59:54,811 - INFO - Mean Rating statistics: 
+count     143.0
+unique     17.0
+top         3.0
+freq       20.0
+Name: Mean Rating, dtype: float64
+2025-03-11 22:59:54,812 - INFO - Difference statistics: 
+count     143.0
+unique     10.0
+top         0.0
+freq       49.0
+Name: Difference, dtype: float64
+2025-03-11 22:59:54,813 - INFO - Added Result status based on difference criteria
+2025-03-11 22:59:54,813 - INFO - Result distribution: 
+Result
+Ok        142
+Not ok      2
+Name: count, dtype: int64
+2025-03-11 22:59:54,813 - INFO - Data extraction completed successfully
+2025-03-11 22:59:54,814 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:59:54,815 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:59:54,820 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:59:54,820 - INFO - Clearing existing data from target sheet
+2025-03-11 22:59:56,175 - ERROR - Failed to write to target sheet: could not convert string to float: ''
+2025-03-11 22:59:56,175 - ERROR - Failed to write to target sheet
+2025-03-11 23:00:53,021 - INFO - Starting script execution
+2025-03-11 23:00:53,021 - INFO - Starting data extraction process
+2025-03-11 23:00:53,021 - INFO - Initiating connection to Google Sheets
+2025-03-11 23:00:53,023 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 23:00:53,024 - INFO - Successfully connected to Google Sheets API
+2025-03-11 23:00:53,024 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 23:00:55,246 - INFO - Successfully retrieved 145 rows of data
+2025-03-11 23:00:55,250 - INFO - Created DataFrame with shape: (144, 83)
+2025-03-11 23:00:55,251 - INFO - Available columns in DataFrame: ['Timestamp', 'Email Address', 'Tool being used', 'Feature used', 'Task Objective', 'Repository Link', 'Repository: Public/Private', 'Repository: Lines of Code', '[Turn 1]: Prompt Category', '[Turn 1]: Prompt', '[Turn 1]: Model Response', '[Turn 1]: Model Response - File [Use only when response is too long]', '[Turn 1]: Observations', '[Turn 1]: Screenshots', '[Turn 2]: Prompt Category', '[Turn 2]: Prompt', '[Turn 2]: Model Response', '[Turn 2]: Model Response - File [Use only when response is too long]', '[Turn 2]: Observations', '[Turn 2]: Screenshot', '[Turn 3]: Prompt Category', '[Turn 3]: Prompt', '[Turn 3]: Model Response', '[Turn 3]: Model Response - File [Use only when response is too long]', '[Turn 3]: Observations', '[Turn 3]: Screenshot', '[Turn 4]: Prompt Category', '[Turn 4]: Prompt', '[Turn 4]: Model Response', '[Turn 4]: Model Response - File [Use only when response is too long]', '[Turn 4]: Observations', '[Turn 4]: Screenshot', '[Turn 5]: Prompt Category', '[Turn 5]: Prompt', '[Turn 5]: Model Response', '[Turn 5]: Model Response - File [Use only when response is too long]', '[Turn 5]: Observations', '[Turn 5]: Screenshot', '[Turn 6]: Prompt Category', '[Turn 6]: Prompt', '[Turn 6]: Model Response', '[Turn 6]: Model Response - File [Use only when response is too long]', '[Turn 6]: Observations', '[Turn 6]: Screenshot', '[Turn 7]: Prompt Category', '[Turn 7]: Prompt', '[Turn 7]: Model Response', '[Turn 7]: Model Response - File [Use only when response is too long]', '[Turn 7]: Observations', '[Turn 7]: Screenshot', 'Context Awareness', 'Context Awareness: Errors', 'Rationale for Context Awareness', 'Output Quality', 'Output Quality: Errors', 'Rationale for Output Quality', 'Autonomy', 'Autonomy: Errors', 'Rationale for Autonomy', 'Iteration Size and Speed', 'Iteration Size and Speed: Errors', 'Rationale for Iteration Size and Speed', 'Experience', 'Experience - Flexibility, Ease of Use and Reliability: Errors', 'Rationale for Experience', 'Loom Recording Link', 'Overall Rating', 'Rationale behind the overall rating', '[Turn 1]: Final Turn?', '[Turn 2]: Final Turn?', '[Turn 3]: Final Turn?', '[Turn 4]: Final Turn?', '[Turn 5]: Final Turn?', '[Turn 6]: Final Turn?', '[Turn 7]: Final Turn?', '[Turn 1]: Turn ID', '[Turn 2]: Turn ID', '[Turn 3]: Turn ID', '[Turn 4]: Turn ID', '[Turn 5]: Turn ID', '[Turn 6]: Turn ID', '[Turn 7]: Turn ID', 'Unique ID']
+2025-03-11 23:00:55,254 - INFO - Filtered DataFrame created with 144 rows and 9 columns
+2025-03-11 23:00:55,255 - INFO - Converted Context Awareness to numeric values
+2025-03-11 23:00:55,259 - INFO - Converted Autonomy to numeric values
+2025-03-11 23:00:55,260 - INFO - Converted Experience to numeric values
+2025-03-11 23:00:55,261 - INFO - Converted Output Quality to numeric values
+2025-03-11 23:00:55,262 - INFO - Converted Overall Rating to numeric values
+2025-03-11 23:00:55,263 - INFO - Calculating mean rating using metrics: ['Context Awareness', 'Autonomy', 'Experience', 'Output Quality']
+2025-03-11 23:00:55,264 - INFO - Mean Rating statistics: 
+count     143.0
+unique     17.0
+top         3.0
+freq       20.0
+Name: Mean Rating, dtype: float64
+2025-03-11 23:00:55,265 - INFO - Difference statistics: 
+count     143.0
+unique     10.0
+top         0.0
+freq       49.0
+Name: Difference, dtype: float64
+2025-03-11 23:00:55,265 - INFO - Added Result status based on difference criteria
+2025-03-11 23:00:55,266 - INFO - Result distribution: 
+Result
+Ok        142
+Not ok      2
+Name: count, dtype: int64
+2025-03-11 23:00:55,266 - INFO - Data extraction completed successfully
+2025-03-11 23:00:55,266 - INFO - Initiating connection to Google Sheets
+2025-03-11 23:00:55,268 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 23:00:55,273 - INFO - Successfully connected to Google Sheets API
+2025-03-11 23:00:55,273 - INFO - Clearing existing data from target sheet
+2025-03-11 23:00:56,432 - INFO - Writing data to target sheet
+2025-03-11 23:00:57,041 - INFO - Successfully wrote data to target sheet
+2025-03-11 23:00:57,041 - INFO - Process completed successfully
+2025-03-11 23:03:13,960 - INFO - Starting script execution
+2025-03-11 23:03:13,960 - INFO - Starting data extraction process
+2025-03-11 23:03:13,960 - INFO - Initiating connection to Google Sheets
+2025-03-11 23:03:13,962 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 23:03:13,963 - INFO - Successfully connected to Google Sheets API
+2025-03-11 23:03:13,963 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 23:03:16,567 - INFO - Successfully retrieved 145 rows of data
+2025-03-11 23:03:16,572 - INFO - Created DataFrame with shape: (144, 83)
+2025-03-11 23:03:16,572 - INFO - Available columns in DataFrame: ['Timestamp', 'Email Address', 'Tool being used', 'Feature used', 'Task Objective', 'Repository Link', 'Repository: Public/Private', 'Repository: Lines of Code', '[Turn 1]: Prompt Category', '[Turn 1]: Prompt', '[Turn 1]: Model Response', '[Turn 1]: Model Response - File [Use only when response is too long]', '[Turn 1]: Observations', '[Turn 1]: Screenshots', '[Turn 2]: Prompt Category', '[Turn 2]: Prompt', '[Turn 2]: Model Response', '[Turn 2]: Model Response - File [Use only when response is too long]', '[Turn 2]: Observations', '[Turn 2]: Screenshot', '[Turn 3]: Prompt Category', '[Turn 3]: Prompt', '[Turn 3]: Model Response', '[Turn 3]: Model Response - File [Use only when response is too long]', '[Turn 3]: Observations', '[Turn 3]: Screenshot', '[Turn 4]: Prompt Category', '[Turn 4]: Prompt', '[Turn 4]: Model Response', '[Turn 4]: Model Response - File [Use only when response is too long]', '[Turn 4]: Observations', '[Turn 4]: Screenshot', '[Turn 5]: Prompt Category', '[Turn 5]: Prompt', '[Turn 5]: Model Response', '[Turn 5]: Model Response - File [Use only when response is too long]', '[Turn 5]: Observations', '[Turn 5]: Screenshot', '[Turn 6]: Prompt Category', '[Turn 6]: Prompt', '[Turn 6]: Model Response', '[Turn 6]: Model Response - File [Use only when response is too long]', '[Turn 6]: Observations', '[Turn 6]: Screenshot', '[Turn 7]: Prompt Category', '[Turn 7]: Prompt', '[Turn 7]: Model Response', '[Turn 7]: Model Response - File [Use only when response is too long]', '[Turn 7]: Observations', '[Turn 7]: Screenshot', 'Context Awareness', 'Context Awareness: Errors', 'Rationale for Context Awareness', 'Output Quality', 'Output Quality: Errors', 'Rationale for Output Quality', 'Autonomy', 'Autonomy: Errors', 'Rationale for Autonomy', 'Iteration Size and Speed', 'Iteration Size and Speed: Errors', 'Rationale for Iteration Size and Speed', 'Experience', 'Experience - Flexibility, Ease of Use and Reliability: Errors', 'Rationale for Experience', 'Loom Recording Link', 'Overall Rating', 'Rationale behind the overall rating', '[Turn 1]: Final Turn?', '[Turn 2]: Final Turn?', '[Turn 3]: Final Turn?', '[Turn 4]: Final Turn?', '[Turn 5]: Final Turn?', '[Turn 6]: Final Turn?', '[Turn 7]: Final Turn?', '[Turn 1]: Turn ID', '[Turn 2]: Turn ID', '[Turn 3]: Turn ID', '[Turn 4]: Turn ID', '[Turn 5]: Turn ID', '[Turn 6]: Turn ID', '[Turn 7]: Turn ID', 'Unique ID']
+2025-03-11 23:03:16,576 - INFO - Filtered DataFrame created with 144 rows and 9 columns
+2025-03-11 23:03:16,577 - INFO - Converted Context Awareness to numeric values
+2025-03-11 23:03:16,581 - INFO - Converted Autonomy to numeric values
+2025-03-11 23:03:16,582 - INFO - Converted Experience to numeric values
+2025-03-11 23:03:16,584 - INFO - Converted Output Quality to numeric values
+2025-03-11 23:03:16,585 - INFO - Converted Overall Rating to numeric values
+2025-03-11 23:03:16,586 - INFO - Calculating mean rating using metrics: ['Context Awareness', 'Autonomy', 'Experience', 'Output Quality']
+2025-03-11 23:03:16,588 - INFO - Mean Rating statistics: 
+count     143.0
+unique     17.0
+top         3.0
+freq       20.0
+Name: Mean Rating, dtype: float64
+2025-03-11 23:03:16,589 - INFO - Difference statistics: 
+count     143.0
+unique     10.0
+top         0.0
+freq       49.0
+Name: Difference, dtype: float64
+2025-03-11 23:03:16,590 - INFO - Added Result status based on difference criteria
+2025-03-11 23:03:16,590 - INFO - Result distribution: 
+Result
+Ok        142
+Not ok      2
+Name: count, dtype: int64
+2025-03-11 23:03:16,590 - INFO - Data extraction completed successfully
+2025-03-11 23:03:16,590 - INFO - Initiating connection to Google Sheets
+2025-03-11 23:03:16,592 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 23:03:16,601 - INFO - Successfully connected to Google Sheets API
+2025-03-11 23:03:16,601 - INFO - Clearing existing data from target sheet
+2025-03-11 23:03:17,841 - INFO - Writing data to target sheet
+2025-03-11 23:03:18,958 - INFO - Successfully wrote data and applied formatting to target sheet
+2025-03-11 23:03:18,958 - INFO - Process completed successfully
