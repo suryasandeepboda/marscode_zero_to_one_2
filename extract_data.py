@@ -21,7 +21,8 @@ logger = logging.getLogger(__name__)
 def connect_to_sheets():
     logger.info("Initiating connection to Google Sheets")
     try:
-        SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+        # Update scope to allow write access
+        SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
         creds = service_account.Credentials.from_service_account_file(
             '/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/credentials.json', 
             scopes=SCOPES
@@ -32,6 +33,36 @@ def connect_to_sheets():
     except Exception as e:
         logger.error(f"Failed to connect to Google Sheets: {str(e)}")
         raise
+
+def write_to_target_sheet(service, data):
+    try:
+        TARGET_SPREADSHEET_ID = '1FEqiDqqPfb9YHAWBiqVepmmXj22zNqXNNI7NLGCDVak'
+        
+        # Clear existing data
+        logger.info("Clearing existing data from target sheet")
+        service.spreadsheets().values().clear(
+            spreadsheetId=TARGET_SPREADSHEET_ID,
+            range='Sheet1!A:Z'
+        ).execute()
+
+        # Prepare data for writing
+        headers = list(data.columns)
+        values = [headers] + data.values.tolist()
+        
+        logger.info("Writing data to target sheet")
+        service.spreadsheets().values().update(
+            spreadsheetId=TARGET_SPREADSHEET_ID,
+            range='Sheet1!A1',
+            valueInputOption='RAW',
+            body={'values': values}
+        ).execute()
+        
+        logger.info("Successfully wrote data to target sheet")
+        return True
+        
+    except Exception as e:
+        logger.error(f"Failed to write to target sheet: {str(e)}")
+        return False
 
 def extract_sheet_data():
     try:
@@ -109,11 +140,15 @@ def extract_sheet_data():
         logger.error(f"Error during data extraction: {str(e)}", exc_info=True)
         return None
 
+# Update main execution
 if __name__ == "__main__":
     logger.info("Starting script execution")
     data = extract_sheet_data()
     if data is not None:
         logger.info("Data extraction completed successfully")
-        print(data.head())
+        if write_to_target_sheet(connect_to_sheets(), data):
+            logger.info("Process completed successfully")
+        else:
+            logger.error("Failed to write to target sheet")
     else:
         logger.error("Failed to extract data")
