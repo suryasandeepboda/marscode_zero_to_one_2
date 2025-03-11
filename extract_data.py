@@ -1,4 +1,6 @@
-from google.oauth2.service_account import Credentials
+# Remove this line
+# from google.oauth2.credentials import Credentials
+from google.oauth2 import service_account
 from googleapiclient.discovery import build
 import pandas as pd
 import logging
@@ -20,8 +22,8 @@ def connect_to_sheets():
     logger.info("Initiating connection to Google Sheets")
     try:
         SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-        creds = Credentials.from_service_account_file(
-            'credentials.json', 
+        creds = service_account.Credentials.from_service_account_file(
+            '/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/credentials.json', 
             scopes=SCOPES
         )
         service = build('sheets', 'v4', credentials=creds)
@@ -37,7 +39,7 @@ def extract_sheet_data():
         service = connect_to_sheets()
         
         SPREADSHEET_ID = '15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE'
-        RANGE_NAME = 'A:Z'
+        RANGE_NAME = 'POD 5!A1:CE1000'
         
         logger.info(f"Fetching data from spreadsheet ID: {SPREADSHEET_ID}")
         sheet = service.spreadsheets()
@@ -56,11 +58,12 @@ def extract_sheet_data():
         
         df = pd.DataFrame(values[1:], columns=values[0])
         logger.info(f"Created DataFrame with shape: {df.shape}")
+        logger.info(f"Available columns in DataFrame: {list(df.columns)}")
         
         required_columns = [
-            'Email address', 'Tool used', 'Feature Used',
+            'Email Address', 'Tool being used', 'Feature used',
             'Context Awareness', 'Autonomy', 'Experience',
-            'Output Quality', 'Overall Rating', 'Unique ID', 'Pod'
+            'Output Quality', 'Overall Rating', 'Unique ID'
         ]
         
         # Verify all required columns exist
@@ -71,6 +74,34 @@ def extract_sheet_data():
         
         filtered_df = df[required_columns]
         logger.info(f"Filtered DataFrame created with {len(filtered_df)} rows and {len(required_columns)} columns")
+        
+        # Convert rating columns to numeric
+        rating_columns = ['Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating']
+        for col in rating_columns:
+            filtered_df[col] = pd.to_numeric(filtered_df[col], errors='coerce')
+            logger.info(f"Converted {col} to numeric values")
+            logger.debug(f"{col} values: {filtered_df[col].describe()}")
+
+        # Calculate Mean Rating
+        metrics_for_mean = ['Context Awareness', 'Autonomy', 'Experience', 'Output Quality']
+        logger.info(f"Calculating mean rating using metrics: {metrics_for_mean}")
+        
+        filtered_df['Mean Rating'] = filtered_df[metrics_for_mean].mean(axis=1)
+        logger.info(f"Mean Rating statistics: \n{filtered_df['Mean Rating'].describe()}")
+        
+        # Calculate difference
+        filtered_df['Difference'] = filtered_df['Mean Rating'] - filtered_df['Overall Rating']
+        logger.info(f"Difference statistics: \n{filtered_df['Difference'].describe()}")
+        
+        # Log counts of Ok vs Not ok results
+        result_counts = filtered_df['Result'].value_counts()
+        logger.info(f"Result distribution: \n{result_counts}")
+        
+        # Determine Result status
+        filtered_df['Result'] = filtered_df['Difference'].apply(
+            lambda x: 'Ok' if -1 <= x <= 1 else 'Not ok'
+        )
+        logger.info("Added Result status based on difference criteria")
         
         return filtered_df
         

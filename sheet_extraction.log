@@ -1,0 +1,313 @@
+2025-03-11 21:00:55,353 - INFO - Starting script execution
+2025-03-11 21:00:55,353 - INFO - Starting data extraction process
+2025-03-11 21:00:55,353 - INFO - Initiating connection to Google Sheets
+2025-03-11 21:00:55,356 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 21:00:55,357 - INFO - Successfully connected to Google Sheets API
+2025-03-11 21:00:55,357 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 21:00:55,786 - ERROR - Error during data extraction: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 44, in extract_sheet_data
+    result = sheet.values().get(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 923, in execute
+    resp, content = _retry_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google_auth_httplib2.py", line 209, in request
+    self.credentials.before_request(self._request, method, uri, request_headers)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 239, in before_request
+    self._blocking_refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 202, in _blocking_refresh
+    self.refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/service_account.py", line 448, in refresh
+    access_token, expiry, _ = _client.jwt_grant(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 299, in jwt_grant
+    response_data = _token_endpoint_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 270, in _token_endpoint_request
+    _handle_error_response(response_data, retryable_error)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-03-11 21:00:55,798 - ERROR - Failed to extract data
+2025-03-11 21:05:32,952 - INFO - Starting script execution
+2025-03-11 21:05:32,952 - INFO - Starting data extraction process
+2025-03-11 21:05:32,952 - INFO - Initiating connection to Google Sheets
+2025-03-11 21:05:32,954 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 21:05:32,955 - INFO - Successfully connected to Google Sheets API
+2025-03-11 21:05:32,955 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 21:05:33,379 - ERROR - Error during data extraction: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 44, in extract_sheet_data
+    result = sheet.values().get(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 923, in execute
+    resp, content = _retry_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google_auth_httplib2.py", line 209, in request
+    self.credentials.before_request(self._request, method, uri, request_headers)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 239, in before_request
+    self._blocking_refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 202, in _blocking_refresh
+    self.refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/service_account.py", line 448, in refresh
+    access_token, expiry, _ = _client.jwt_grant(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 299, in jwt_grant
+    response_data = _token_endpoint_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 270, in _token_endpoint_request
+    _handle_error_response(response_data, retryable_error)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-03-11 21:05:33,391 - ERROR - Failed to extract data
+2025-03-11 21:08:21,742 - INFO - Starting script execution
+2025-03-11 21:08:21,742 - INFO - Starting data extraction process
+2025-03-11 21:08:21,742 - INFO - Initiating connection to Google Sheets
+2025-03-11 21:08:21,744 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 21:08:21,746 - INFO - Successfully connected to Google Sheets API
+2025-03-11 21:08:21,746 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 21:08:22,158 - ERROR - Error during data extraction: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 44, in extract_sheet_data
+    result = sheet.values().get(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 923, in execute
+    resp, content = _retry_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google_auth_httplib2.py", line 209, in request
+    self.credentials.before_request(self._request, method, uri, request_headers)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 239, in before_request
+    self._blocking_refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 202, in _blocking_refresh
+    self.refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/service_account.py", line 448, in refresh
+    access_token, expiry, _ = _client.jwt_grant(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 299, in jwt_grant
+    response_data = _token_endpoint_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 270, in _token_endpoint_request
+    _handle_error_response(response_data, retryable_error)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-03-11 21:08:22,166 - ERROR - Failed to extract data
+2025-03-11 21:11:53,122 - INFO - Starting script execution
+2025-03-11 21:11:53,123 - INFO - Starting data extraction process
+2025-03-11 21:11:53,123 - INFO - Initiating connection to Google Sheets
+2025-03-11 21:11:53,124 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 21:11:53,126 - INFO - Successfully connected to Google Sheets API
+2025-03-11 21:11:53,126 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 21:11:53,539 - ERROR - Error during data extraction: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 44, in extract_sheet_data
+    result = sheet.values().get(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 923, in execute
+    resp, content = _retry_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google_auth_httplib2.py", line 209, in request
+    self.credentials.before_request(self._request, method, uri, request_headers)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 239, in before_request
+    self._blocking_refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 202, in _blocking_refresh
+    self.refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/service_account.py", line 448, in refresh
+    access_token, expiry, _ = _client.jwt_grant(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 299, in jwt_grant
+    response_data = _token_endpoint_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 270, in _token_endpoint_request
+    _handle_error_response(response_data, retryable_error)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-03-11 21:11:53,544 - ERROR - Failed to extract data
+2025-03-11 21:13:52,868 - INFO - Starting script execution
+2025-03-11 21:13:52,868 - INFO - Starting data extraction process
+2025-03-11 21:13:52,868 - INFO - Initiating connection to Google Sheets
+2025-03-11 21:13:52,870 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 21:13:52,871 - INFO - Successfully connected to Google Sheets API
+2025-03-11 21:13:52,871 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 21:13:53,277 - ERROR - Error during data extraction: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 45, in extract_sheet_data
+    result = sheet.values().get(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 923, in execute
+    resp, content = _retry_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google_auth_httplib2.py", line 209, in request
+    self.credentials.before_request(self._request, method, uri, request_headers)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 239, in before_request
+    self._blocking_refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 202, in _blocking_refresh
+    self.refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/service_account.py", line 448, in refresh
+    access_token, expiry, _ = _client.jwt_grant(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 299, in jwt_grant
+    response_data = _token_endpoint_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 270, in _token_endpoint_request
+    _handle_error_response(response_data, retryable_error)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-03-11 21:13:53,287 - ERROR - Failed to extract data
+2025-03-11 21:18:21,784 - INFO - Starting script execution
+2025-03-11 21:18:21,784 - INFO - Starting data extraction process
+2025-03-11 21:18:21,785 - INFO - Initiating connection to Google Sheets
+2025-03-11 21:18:21,786 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 21:18:21,788 - INFO - Successfully connected to Google Sheets API
+2025-03-11 21:18:21,788 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 21:18:22,200 - ERROR - Error during data extraction: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 46, in extract_sheet_data
+    result = sheet.values().get(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 923, in execute
+    resp, content = _retry_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google_auth_httplib2.py", line 209, in request
+    self.credentials.before_request(self._request, method, uri, request_headers)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 239, in before_request
+    self._blocking_refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/auth/credentials.py", line 202, in _blocking_refresh
+    self.refresh(request)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/service_account.py", line 448, in refresh
+    access_token, expiry, _ = _client.jwt_grant(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 299, in jwt_grant
+    response_data = _token_endpoint_request(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 270, in _token_endpoint_request
+    _handle_error_response(response_data, retryable_error)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/google/oauth2/_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-03-11 21:18:22,212 - ERROR - Failed to extract data
+2025-03-11 22:08:40,257 - INFO - Starting script execution
+2025-03-11 22:08:40,257 - INFO - Starting data extraction process
+2025-03-11 22:08:40,257 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:08:40,259 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:08:40,261 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:08:40,261 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:08:41,682 - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-03-11 22:08:41,683 - ERROR - Error during data extraction: <HttpError 403 when requesting https://sheets.googleapis.com/v4/spreadsheets/15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE/values/POD%205%21A2%3ACE1000?alt=json returned "The caller does not have permission". Details: "The caller does not have permission">
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 46, in extract_sheet_data
+    result = sheet.values().get(
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/surya.sandeep.boda/Library/Python/3.9/lib/python/site-packages/googleapiclient/http.py", line 938, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 403 when requesting https://sheets.googleapis.com/v4/spreadsheets/15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE/values/POD%205%21A2%3ACE1000?alt=json returned "The caller does not have permission". Details: "The caller does not have permission">
+2025-03-11 22:08:41,690 - ERROR - Failed to extract data
+2025-03-11 22:11:23,005 - INFO - Starting script execution
+2025-03-11 22:11:23,005 - INFO - Starting data extraction process
+2025-03-11 22:11:23,005 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:11:23,006 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:11:23,008 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:11:23,008 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:11:25,551 - INFO - Successfully retrieved 144 rows of data
+2025-03-11 22:11:25,555 - INFO - Created DataFrame with shape: (143, 83)
+2025-03-11 22:11:25,557 - ERROR - Missing required columns: ['Email address', 'Tool used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+2025-03-11 22:11:25,557 - ERROR - Error during data extraction: Missing required columns: ['Email address', 'Tool used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 72, in extract_sheet_data
+    raise ValueError(f"Missing required columns: {missing_columns}")
+ValueError: Missing required columns: ['Email address', 'Tool used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+2025-03-11 22:11:25,558 - ERROR - Failed to extract data
+2025-03-11 22:15:49,533 - INFO - Starting script execution
+2025-03-11 22:15:49,534 - INFO - Starting data extraction process
+2025-03-11 22:15:49,534 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:15:49,535 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:15:49,536 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:15:49,537 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:15:52,337 - INFO - Successfully retrieved 144 rows of data
+2025-03-11 22:15:52,341 - INFO - Created DataFrame with shape: (143, 83)
+2025-03-11 22:15:52,343 - ERROR - Missing required columns: ['Email address', 'Tool used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+2025-03-11 22:15:52,343 - ERROR - Error during data extraction: Missing required columns: ['Email address', 'Tool used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 72, in extract_sheet_data
+    raise ValueError(f"Missing required columns: {missing_columns}")
+ValueError: Missing required columns: ['Email address', 'Tool used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+2025-03-11 22:15:52,344 - ERROR - Failed to extract data
+2025-03-11 22:16:49,681 - INFO - Starting script execution
+2025-03-11 22:16:49,681 - INFO - Starting data extraction process
+2025-03-11 22:16:49,681 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:16:49,683 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:16:49,684 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:16:49,684 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:16:52,553 - INFO - Successfully retrieved 144 rows of data
+2025-03-11 22:16:52,555 - INFO - Created DataFrame with shape: (143, 83)
+2025-03-11 22:16:52,557 - ERROR - Missing required columns: ['Email address', 'Tool being used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+2025-03-11 22:16:52,557 - ERROR - Error during data extraction: Missing required columns: ['Email address', 'Tool being used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 72, in extract_sheet_data
+    raise ValueError(f"Missing required columns: {missing_columns}")
+ValueError: Missing required columns: ['Email address', 'Tool being used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+2025-03-11 22:16:52,557 - ERROR - Failed to extract data
+2025-03-11 22:18:35,437 - INFO - Starting script execution
+2025-03-11 22:18:35,437 - INFO - Starting data extraction process
+2025-03-11 22:18:35,437 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:18:35,439 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:18:35,440 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:18:35,440 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:18:37,693 - INFO - Successfully retrieved 144 rows of data
+2025-03-11 22:18:37,698 - INFO - Created DataFrame with shape: (143, 83)
+2025-03-11 22:18:37,698 - INFO - Available columns in DataFrame: ['2/6/2025 3:35:15', 'usama.r@turing.com', 'Cursor', 'Chat', "The current application is FastAPI router implementation for handling agent-related endpoints.\n\nI asked the AI to clean the code in a single file, fixing all the unused imports by using the fastapi's depends() method.", 'https://github.com/khoj-ai/khoj', 'Public', '32790', 'Code Review', "Clean this code, fixing all the unused imports by using the fastapi's depends() method.", 'I\'ll help clean up the imports and use FastAPI\'s `Depends` for better dependency injection. Here are the changes needed:\n\n```python:src/khoj/routers/api_agents.py\n// existing code...\nfrom typing import Dict, List, Optional\n\nfrom fastapi import APIRouter, Depends, Request, Response\nfrom pydantic import BaseModel\nfrom starlette.authentication import has_required_scope, requires\n\nfrom khoj.database.adapters import AgentAdapters, ConversationAdapters\nfrom khoj.database.models import Agent, Conversation, KhojUser\n// ... existing code ...\n```\n\nThe main changes are:\n\n1. Removed unused imports:\n   - Removed duplicate `from fastapi.requests import Request`\n   - Removed `from fastapi.responses import Response` since we\'re already importing Response from fastapi\n   - Removed unused `EntryAdapters` from database.adapters\n\n2. Added `Depends` to the FastAPI imports since we\'ll use it for dependency injection\n\n3. Consolidated FastAPI imports into a single line\n\nNow we need to update the route handlers to use dependency injection. Here\'s an example of how to modify one of the endpoints:\n\n```python:src/khoj/routers/api_agents.py\n// ... existing code ...\n\n@api_agents.get("", response_class=Response)\nasync def all_agents(\n    request: Request,\n    common: CommonQueryParams = Depends(),\n) -> Response:\n    // ... existing code ...\n\n@api_agents.get("/conversation", response_class=Response)\n@requires(["authenticated"])\nasync def get_agent_by_conversation(\n    request: Request,\n    common: CommonQueryParams = Depends(),\n    conversation_id: str,\n) -> Response:\n    // ... existing code ...\n```\n\nThe pattern should be applied to all route handlers in the file. The key change is using `Depends()` for the `CommonQueryParams` parameter instead of just type annotation.\n\nThis makes the dependency injection more explicit and follows FastAPI best practices. The code will be cleaner and more maintainable while retaining all functionality.\n\nWould you like me to show the changes for the remaining route handlers as well?\n', '', '+ It identified the repeat imports and fixed it\n+ It identified the unused import and removed it\n+ It found an unused parameter and correctly added "Depends()" to fix it\n\n- It only fixed a few unused parameters.', 'https://drive.google.com/open?id=1kgnR9utteCW3I4un57WFM7Zr6vZgOzMA, https://drive.google.com/open?id=1v4M91Ho8otzrLkQlkzx8wXs9s-5NY1F5, https://drive.google.com/open?id=1Z_cGdwua4wfbvMC1xJYCxmDzSayBChf2', 'Code Review', 'Some unused parameters are still without dependency injection. Also, add the dependency injection whereever it is appropriate.', 'I\'ll help add dependency injection for the remaining route handlers. Here are the changes:\n\n```python:src/khoj/routers/api_agents.py\n// ... existing code ...\n\n@api_agents.get("/options", response_class=Response)\nasync def get_agent_configuration_options(\n    request: Request,\n    common: CommonQueryParams = Depends(),\n) -> Response:\n    // ... existing code ...\n\n@api_agents.get("/{agent_slug}", response_class=Response)\nasync def get_agent(\n    request: Request,\n    common: CommonQueryParams = Depends(),\n    agent_slug: str,\n) -> Response:\n    // ... existing code ...\n\n@api_agents.delete("/{agent_slug}", response_class=Response)\n@requires(["authenticated"])\nasync def delete_agent(\n    request: Request,\n    common: CommonQueryParams = Depends(),\n    agent_slug: str,\n) -> Response:\n    // ... existing code ...\n\n@api_agents.patch("/hidden", response_class=Response)\n@requires(["authenticated"])\nasync def update_hidden_agent(\n    request: Request,\n    common: CommonQueryParams = Depends(),\n    body: ModifyHiddenAgentBody,\n) -> Response:\n    // ... existing code ...\n\n@api_agents.post("/hidden", response_class=Response)\n@requires(["authenticated"])\nasync def create_hidden_agent(\n    request: Request,\n    common: CommonQueryParams = Depends(),\n    conversation_id: str,\n    body: ModifyHiddenAgentBody,\n) -> Response:\n    // ... existing code ...\n\n@api_agents.post("", response_class=Response)\n@requires(["authenticated"])\nasync def create_agent(\n    request: Request,\n    common: CommonQueryParams = Depends(),\n    body: ModifyAgentBody,\n) -> Response:\n    // ... existing code ...\n\n@api_agents.patch("", response_class=Response)\n@requires(["authenticated"])\nasync def update_agent(\n    request: Request,\n    common: CommonQueryParams = Depends(),\n    body: ModifyAgentBody,\n) -> Response:\n    // ... existing code ...\n```\n\nThe key changes are:\n1. Added `Depends()` to all `CommonQueryParams` parameters in route handlers\n2. Kept the request parameter as is since it\'s required for authentication checks\n3. Kept route parameters (like `agent_slug`, `conversation_id`) and request bodies (like `ModifyAgentBody`, `ModifyHiddenAgentBody`) as regular parameters since they come from the request path/body\n\nThis makes the dependency injection consistent across all endpoints while maintaining the required functionality.', '', '+ The model correctly added Depends() to all functions\n+ The model correctly did not add Depends to parameters that were not appropriate', 'https://drive.google.com/open?id=1CxsGxm1G6MIlxtMRECusvo_t9BmMkljq, https://drive.google.com/open?id=1gStwDy7pI3sBknUUsQt-9ZNBZ_kXFyA9', 'Code Review', 'are there any more improvements that could be made to this page?', 'Yes, there are a few improvements that could be made to this file:\n\n1. The `Request` parameter could be replaced with dependency injection for the user in most endpoints:\n\n```python:src/khoj/routers/api_agents.py\n// ... existing imports ...\nfrom typing import Annotated\n\n// Add this dependency function near the top\nasync def get_current_user(request: Request) -> Optional[KhojUser]:\n    return request.user.object if request.user.is_authenticated else None\n\n// Then update the route handlers to use it, for example:\n@api_agents.get("", response_class=Response)\nasync def all_agents(\n    user: Annotated[Optional[KhojUser], Depends(get_current_user)],\n    common: CommonQueryParams = Depends(),\n) -> Response:\n    agents = await AgentAdapters.aget_all_accessible_agents(user)\n    // ... rest of the function ...\n```\n\n2. The response serialization could be standardized using Pydantic models:\n\n```python:src/khoj/routers/api_agents.py\nclass AgentResponse(BaseModel):\n    slug: str\n    name: str\n    persona: str = Field(alias="personality")\n    creator: Optional[str] = None\n    managed_by_admin: bool\n    color: str = Field(alias="style_color")\n    icon: str = Field(alias="style_icon") \n    privacy_level: str\n    chat_model: str\n    files: List[str] = []\n    input_tools: List[str]\n    output_modes: List[str]\n    is_hidden: Optional[bool] = None\n\n// Then in the route handlers:\n@api_agents.get("", response_model=List[AgentResponse])\nasync def all_agents(\n    user: Annotated[Optional[KhojUser], Depends(get_current_user)],\n    common: CommonQueryParams = Depends(),\n) -> List[AgentResponse]:\n    // ... process logic ...\n    return agents_packet\n```\n\n3. Error handling could be centralized using FastAPI\'s exception handlers:\n\n```python:src/khoj/routers/api_agents.py\nfrom fastapi import HTTPException\n\nclass AgentNotFoundError(HTTPException):\n    def __init__(self, agent_slug: str):\n        super().__init__(\n            status_code=404,\n            detail=f"Agent with slug {agent_slug} not found."\n        )\n\n// Then in route handlers:\n@api_agents.get("/{agent_slug}", response_model=AgentResponse)\nasync def get_agent(\n    user: Annotated[Optional[KhojUser], Depends(get_current_user)],\n    common: CommonQueryParams = Depends(),\n    agent_slug: str,\n) -> AgentResponse:\n    agent = await AgentAdapters.aget_readonly_agent_by_slug(agent_slug, user)\n    if not agent:\n        raise AgentNotFoundError(agent_slug)\n    // ... rest of function ...\n```\n\n4. The authentication requirements could be moved to router level instead of individual endpoints:\n\n```python:src/khoj/routers/api_agents.py\nauthenticated_router = APIRouter(dependencies=[Depends(requires("authenticated"))])\napi_agents.include_router(authenticated_router, prefix="/authenticated")\n\n// Then move authenticated endpoints under this router\n@authenticated_router.post("")\nasync def create_agent(\n    user: Annotated[KhojUser, Depends(get_current_user)],  // Note: No longer Optional\n    common: CommonQueryParams = Depends(),\n    body: ModifyAgentBody,\n) -> AgentResponse:\n    // ... rest of function ...\n```\n\nWould you like me to show the implementation of any of these improvements in more detail?', '', '+ It identified multiple areas of improvement\n+ It tried to standardize repeated code\n\n- It failed to apply the improvements consistently', 'https://drive.google.com/open?id=1wyUROUkryaPWF_olTn2WjkD0mK6y4_5Y', 'Code Review', "you didn't apply the improvements across the whole page", 'You\'re right. Let\'s continue applying the improvements consistently across all remaining endpoints. Here are the changes needed:\n// ... existing code until get_agent_by_conversation ...\n\n@api_agents.get("/conversation", response_model=AgentResponse)\n@requires(["authenticated"])\nasync def get_agent_by_conversation(\n    user: Annotated[KhojUser, Depends(get_current_user)],\n    common: CommonQueryParams = Depends(),\n    conversation_id: str,\n) -> AgentResponse:\n    conversation = await ConversationAdapters.aget_conversation_by_user(user=user, conversation_id=conversation_id)\n\n    if not conversation:\n        raise HTTPException(\n            status_code=404,\n            detail=f"Conversation with id {conversation_id} not found for user {user}."\n        )\n\n    agent = await AgentAdapters.aget_agent_by_slug(conversation.agent.slug, user)\n    has_files = agent.fileobject_set.exists()\n\n    agents_packet = {\n        "slug": agent.slug,\n        "name": agent.name,\n        "persona": agent.personality,\n        "creator": agent.creator.username if agent.creator else None,\n        "managed_by_admin": agent.managed_by_admin,\n        "color": agent.style_color,\n        "icon": agent.style_icon,\n        "privacy_level": agent.privacy_level,\n        "chat_model": agent.chat_model.name,\n        "has_files": has_files,\n        "input_tools": agent.input_tools,\n        "output_modes": agent.output_modes,\n        "is_creator": agent.creator == user,\n        "is_hidden": agent.is_hidden,\n    }\n\n    return AgentResponse(**agents_packet)\n\n// ... existing code until delete_agent ...\n\n@authenticated_router.delete("/{agent_slug}", response_model=dict)\nasync def delete_agent(\n    user: Annotated[KhojUser, Depends(get_current_user)],\n    common: CommonQueryParams = Depends(),\n    agent_slug: str,\n) -> dict:\n    agent = await AgentAdapters.aget_agent_by_slug(agent_slug, user)\n\n    if not agent:\n        raise AgentNotFoundError(agent_slug)\n\n    await AgentAdapters.adelete_agent_by_slug(agent_slug, user)\n    return {"message": "Agent deleted."}\n\n// ... existing code until update_hidden_agent ...\n\n@authenticated_router.patch("/hidden", response_model=AgentResponse)\nasync def update_hidden_agent(\n    user: Annotated[KhojUser, Depends(get_current_user)],\n    common: CommonQueryParams = Depends(),\n    body: ModifyHiddenAgentBody,\n) -> AgentResponse:\n    subscribed = has_required_scope(user, ["premium"])\n    chat_model = body.chat_model if subscribed else None\n\n    selected_agent = await AgentAdapters.aget_agent_by_slug(body.slug, user)\n\n    if not selected_agent:\n        raise AgentNotFoundError(body.slug)\n\n    agent = await AgentAdapters.aupdate_hidden_agent(\n        user=user,\n        slug=body.slug,\n        persona=body.persona,\n        chat_model=chat_model,\n        input_tools=body.input_tools,\n        output_modes=body.output_modes,\n        existing_agent=selected_agent,\n    )\n\n    agents_packet = {\n        "slug": agent.slug,\n        "name": agent.name,\n        "persona": agent.personality,\n        "creator": agent.creator.username if agent.creator else None,\n        "chat_model": agent.chat_model.name,\n        "input_tools": agent.input_tools,\n        "output_modes": agent.output_modes,\n    }\n\n    return AgentResponse(**agents_packet)\n\n@authenticated_router.post("/hidden", response_model=AgentResponse)\nasync def create_hidden_agent(\n    user: Annotated[KhojUser, Depends(get_current_user)],\n    common: CommonQueryParams = Depends(),\n    conversation_id: str,\n    body: ModifyHiddenAgentBody,\n) -> AgentResponse:\n    subscribed = has_required_scope(user, ["premium"])\n    chat_model = body.chat_model if subscribed else None\n\n    conversation = await ConversationAdapters.aget_conversation_by_user(user=user, conversation_id=conversation_id)\n    if not conversation:\n        raise HTTPException(\n            status_code=404,\n            detail=f"Conversation with id {conversation_id} not found for user {user}."\n        )\n\n    if conversation.agent and conversation.agent.slug != AgentAdapters.DEFAULT_AGENT_SLUG:\n        raise HTTPException(\n            status_code=400,\n            detail=f"Conversation with id {conversation_id} already has an agent. Use the PATCH method."\n        )\n\n    agent = await AgentAdapters.aupdate_hidden_agent(\n        user=user,\n        slug=body.slug,\n        persona=body.persona,\n        chat_model=chat_model,\n        input_tools=body.input_tools,\n        output_modes=body.output_modes,\n        existing_agent=None,\n    )\n\n    conversation.agent = agent\n    await conversation.asave()\n\n    agents_packet = {\n        "slug": agent.slug,\n        "name": agent.name,\n        "persona": agent.personality,\n        "creator": agent.creator.username if agent.creator else None,\n        "chat_model": agent.chat_model.name,\n        "input_tools": agent.input_tools,\n        "output_modes": agent.output_modes,\n    }\n\n    return AgentResponse(**agents_packet)\n\n// ... existing code until update_agent ...\n\n@authenticated_router.patch("", response_model=AgentResponse)\nasync def update_agent(\n    user: Annotated[KhojUser, Depends(get_current_user)],\n    common: CommonQueryParams = Depends(),\n    body: ModifyAgentBody,\n) -> AgentResponse:\n    is_safe_prompt, reason = await acheck_if_safe_prompt(\n        body.persona, user, lax=body.privacy_level == Agent.PrivacyLevel.PRIVATE\n    )\n\n    if not is_safe_prompt:\n        raise HTTPException(\n            status_code=400,\n            detail=reason\n        )\n\n    selected_agent = await AgentAdapters.aget_agent_by_slug(body.slug, user)\n\n    if not selected_agent:\n        raise AgentNotFoundError(body.name)\n\n    subscribed = has_required_scope(user, ["premium"])\n    chat_model = body.chat_model if subscribed else None\n\n    agent = await AgentAdapters.aupdate_agent(\n        user,\n        body.name,\n        body.persona,\n        body.privacy_level,\n        body.icon,\n        body.color,\n        chat_model,\n        body.files,\n        body.input_tools,\n        body.output_modes,\n        body.slug,\n    )\n\n    agents_packet = {\n        "slug": agent.slug,\n        "name": agent.name,\n        "persona": agent.personality,\n        "creator": agent.creator.username if agent.creator else None,\n        "managed_by_admin": agent.managed_by_admin,\n        "color": agent.style_color,\n        "icon": agent.style_icon,\n        "privacy_level": agent.privacy_level,\n        "chat_model": agent.chat_model.name,\n        "files": body.files,\n        "input_tools": agent.input_tools,\n        "output_modes": agent.output_modes,\n    }\n\n    return AgentResponse(**agents_packet)\n\nThe key changes made across all endpoints:\nMoved authenticated endpoints to authenticated_router\nUsed Depends(get_current_user) for user injection\nUsed Pydantic models for response validation with response_model\nStandardized error handling using HTTPException\nRemoved manual JSON response construction in favor of Pydantic models\nMade return types more specific\nRemoved redundant @requires(["authenticated"]) decorators\nFixed has_required_scope to use user instead of request where applicable\nThese changes make the code more consistent, type-safe, and easier to maintain.', '', '+ Model consistently applied all improvements to all the functions', 'https://drive.google.com/open?id=1dR_aOE5v8tPcWsqH5wm3EW4VUBWt-4U9, https://drive.google.com/open?id=12b4VCvNt0eZZYvsvXgO6hEm47RWhsJeQ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '4', 'CA_002: Incomplete File Modifications – Misses critical files during modifications, leading to incomplete or non-functional implementations.', '+ It fulfilled the task requirements, even if they were sometimes vague\n+ It accurately identified repeat code, and refactored it\n\n- It updated some of the functions but not all of them', '4', 'OQ_007: Breaking Changes Introduced – Modifications inadvertently disrupt existing functionality or introduce regressions.', '+ It wrote good code based on DRY practices\n\n- It suggested improvements that changed existing functionality to potentially add breaking changes.', '4', 'None', '+ It decomposed the requirement properly and broke it down into smaller tasks that it completed correctly\n\n- It only partially implemented larger changes and asked for instructions on whether to complete the change.', '4', 'IS_003: Partial Task Completion – Completes tasks partially, requiring multiple iterations to finish.', '- Bigger changes were only partially completed in the first turn, requiring prompting to appy the change completely\n\n+ No change took more than 2 turns to complete', '5', 'None', '+ It was easy to use and user friendly\n+ It was easy to see what changes had been implemented', 'https://www.loom.com/share/5a9b223c3495414e8b9c7a4ba55c46e6', '5', 'The tool proved to be user-friendly and intuitive, making it easy to navigate and utilize effectively.\n\nStrong aspects: Ease of use, intuitive interface, and smooth functionality.\nAreas for improvement: Adding consistency in code refactoring to enhance maintainability.', '', '', '', 'Yes', '', '', '', '', '', '', '', '', '', '', 'POD 5-149997']
+2025-03-11 22:18:37,701 - ERROR - Missing required columns: ['Email Address', 'Tool being used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+2025-03-11 22:18:37,701 - ERROR - Error during data extraction: Missing required columns: ['Email Address', 'Tool being used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 73, in extract_sheet_data
+    raise ValueError(f"Missing required columns: {missing_columns}")
+ValueError: Missing required columns: ['Email Address', 'Tool being used', 'Feature Used', 'Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating', 'Unique ID', 'Pod']
+2025-03-11 22:18:37,703 - ERROR - Failed to extract data
+2025-03-11 22:19:49,715 - INFO - Starting script execution
+2025-03-11 22:19:49,715 - INFO - Starting data extraction process
+2025-03-11 22:19:49,715 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:19:49,717 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:19:49,718 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:19:49,718 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:19:52,437 - INFO - Successfully retrieved 145 rows of data
+2025-03-11 22:19:52,441 - INFO - Created DataFrame with shape: (144, 83)
+2025-03-11 22:19:52,442 - INFO - Available columns in DataFrame: ['Timestamp', 'Email Address', 'Tool being used', 'Feature used', 'Task Objective', 'Repository Link', 'Repository: Public/Private', 'Repository: Lines of Code', '[Turn 1]: Prompt Category', '[Turn 1]: Prompt', '[Turn 1]: Model Response', '[Turn 1]: Model Response - File [Use only when response is too long]', '[Turn 1]: Observations', '[Turn 1]: Screenshots', '[Turn 2]: Prompt Category', '[Turn 2]: Prompt', '[Turn 2]: Model Response', '[Turn 2]: Model Response - File [Use only when response is too long]', '[Turn 2]: Observations', '[Turn 2]: Screenshot', '[Turn 3]: Prompt Category', '[Turn 3]: Prompt', '[Turn 3]: Model Response', '[Turn 3]: Model Response - File [Use only when response is too long]', '[Turn 3]: Observations', '[Turn 3]: Screenshot', '[Turn 4]: Prompt Category', '[Turn 4]: Prompt', '[Turn 4]: Model Response', '[Turn 4]: Model Response - File [Use only when response is too long]', '[Turn 4]: Observations', '[Turn 4]: Screenshot', '[Turn 5]: Prompt Category', '[Turn 5]: Prompt', '[Turn 5]: Model Response', '[Turn 5]: Model Response - File [Use only when response is too long]', '[Turn 5]: Observations', '[Turn 5]: Screenshot', '[Turn 6]: Prompt Category', '[Turn 6]: Prompt', '[Turn 6]: Model Response', '[Turn 6]: Model Response - File [Use only when response is too long]', '[Turn 6]: Observations', '[Turn 6]: Screenshot', '[Turn 7]: Prompt Category', '[Turn 7]: Prompt', '[Turn 7]: Model Response', '[Turn 7]: Model Response - File [Use only when response is too long]', '[Turn 7]: Observations', '[Turn 7]: Screenshot', 'Context Awareness', 'Context Awareness: Errors', 'Rationale for Context Awareness', 'Output Quality', 'Output Quality: Errors', 'Rationale for Output Quality', 'Autonomy', 'Autonomy: Errors', 'Rationale for Autonomy', 'Iteration Size and Speed', 'Iteration Size and Speed: Errors', 'Rationale for Iteration Size and Speed', 'Experience', 'Experience - Flexibility, Ease of Use and Reliability: Errors', 'Rationale for Experience', 'Loom Recording Link', 'Overall Rating', 'Rationale behind the overall rating', '[Turn 1]: Final Turn?', '[Turn 2]: Final Turn?', '[Turn 3]: Final Turn?', '[Turn 4]: Final Turn?', '[Turn 5]: Final Turn?', '[Turn 6]: Final Turn?', '[Turn 7]: Final Turn?', '[Turn 1]: Turn ID', '[Turn 2]: Turn ID', '[Turn 3]: Turn ID', '[Turn 4]: Turn ID', '[Turn 5]: Turn ID', '[Turn 6]: Turn ID', '[Turn 7]: Turn ID', 'Unique ID']
+2025-03-11 22:19:52,443 - ERROR - Missing required columns: ['Feature Used', 'Pod']
+2025-03-11 22:19:52,443 - ERROR - Error during data extraction: Missing required columns: ['Feature Used', 'Pod']
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 73, in extract_sheet_data
+    raise ValueError(f"Missing required columns: {missing_columns}")
+ValueError: Missing required columns: ['Feature Used', 'Pod']
+2025-03-11 22:19:52,444 - ERROR - Failed to extract data
+2025-03-11 22:21:06,371 - INFO - Starting script execution
+2025-03-11 22:21:06,372 - INFO - Starting data extraction process
+2025-03-11 22:21:06,372 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:21:06,373 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:21:06,374 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:21:06,375 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:21:09,100 - INFO - Successfully retrieved 145 rows of data
+2025-03-11 22:21:09,104 - INFO - Created DataFrame with shape: (144, 83)
+2025-03-11 22:21:09,104 - INFO - Available columns in DataFrame: ['Timestamp', 'Email Address', 'Tool being used', 'Feature used', 'Task Objective', 'Repository Link', 'Repository: Public/Private', 'Repository: Lines of Code', '[Turn 1]: Prompt Category', '[Turn 1]: Prompt', '[Turn 1]: Model Response', '[Turn 1]: Model Response - File [Use only when response is too long]', '[Turn 1]: Observations', '[Turn 1]: Screenshots', '[Turn 2]: Prompt Category', '[Turn 2]: Prompt', '[Turn 2]: Model Response', '[Turn 2]: Model Response - File [Use only when response is too long]', '[Turn 2]: Observations', '[Turn 2]: Screenshot', '[Turn 3]: Prompt Category', '[Turn 3]: Prompt', '[Turn 3]: Model Response', '[Turn 3]: Model Response - File [Use only when response is too long]', '[Turn 3]: Observations', '[Turn 3]: Screenshot', '[Turn 4]: Prompt Category', '[Turn 4]: Prompt', '[Turn 4]: Model Response', '[Turn 4]: Model Response - File [Use only when response is too long]', '[Turn 4]: Observations', '[Turn 4]: Screenshot', '[Turn 5]: Prompt Category', '[Turn 5]: Prompt', '[Turn 5]: Model Response', '[Turn 5]: Model Response - File [Use only when response is too long]', '[Turn 5]: Observations', '[Turn 5]: Screenshot', '[Turn 6]: Prompt Category', '[Turn 6]: Prompt', '[Turn 6]: Model Response', '[Turn 6]: Model Response - File [Use only when response is too long]', '[Turn 6]: Observations', '[Turn 6]: Screenshot', '[Turn 7]: Prompt Category', '[Turn 7]: Prompt', '[Turn 7]: Model Response', '[Turn 7]: Model Response - File [Use only when response is too long]', '[Turn 7]: Observations', '[Turn 7]: Screenshot', 'Context Awareness', 'Context Awareness: Errors', 'Rationale for Context Awareness', 'Output Quality', 'Output Quality: Errors', 'Rationale for Output Quality', 'Autonomy', 'Autonomy: Errors', 'Rationale for Autonomy', 'Iteration Size and Speed', 'Iteration Size and Speed: Errors', 'Rationale for Iteration Size and Speed', 'Experience', 'Experience - Flexibility, Ease of Use and Reliability: Errors', 'Rationale for Experience', 'Loom Recording Link', 'Overall Rating', 'Rationale behind the overall rating', '[Turn 1]: Final Turn?', '[Turn 2]: Final Turn?', '[Turn 3]: Final Turn?', '[Turn 4]: Final Turn?', '[Turn 5]: Final Turn?', '[Turn 6]: Final Turn?', '[Turn 7]: Final Turn?', '[Turn 1]: Turn ID', '[Turn 2]: Turn ID', '[Turn 3]: Turn ID', '[Turn 4]: Turn ID', '[Turn 5]: Turn ID', '[Turn 6]: Turn ID', '[Turn 7]: Turn ID', 'Unique ID']
+2025-03-11 22:21:09,105 - ERROR - Missing required columns: ['Feature Used']
+2025-03-11 22:21:09,105 - ERROR - Error during data extraction: Missing required columns: ['Feature Used']
+Traceback (most recent call last):
+  File "/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/extract_data.py", line 73, in extract_sheet_data
+    raise ValueError(f"Missing required columns: {missing_columns}")
+ValueError: Missing required columns: ['Feature Used']
+2025-03-11 22:21:09,106 - ERROR - Failed to extract data
+2025-03-11 22:21:39,199 - INFO - Starting script execution
+2025-03-11 22:21:39,199 - INFO - Starting data extraction process
+2025-03-11 22:21:39,199 - INFO - Initiating connection to Google Sheets
+2025-03-11 22:21:39,201 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 22:21:39,202 - INFO - Successfully connected to Google Sheets API
+2025-03-11 22:21:39,202 - INFO - Fetching data from spreadsheet ID: 15FMeidgU2Dg7Q4JKPkLAdJmQ3IxWCWJXjhCo9UterCE
+2025-03-11 22:21:41,878 - INFO - Successfully retrieved 145 rows of data
+2025-03-11 22:21:41,883 - INFO - Created DataFrame with shape: (144, 83)
+2025-03-11 22:21:41,883 - INFO - Available columns in DataFrame: ['Timestamp', 'Email Address', 'Tool being used', 'Feature used', 'Task Objective', 'Repository Link', 'Repository: Public/Private', 'Repository: Lines of Code', '[Turn 1]: Prompt Category', '[Turn 1]: Prompt', '[Turn 1]: Model Response', '[Turn 1]: Model Response - File [Use only when response is too long]', '[Turn 1]: Observations', '[Turn 1]: Screenshots', '[Turn 2]: Prompt Category', '[Turn 2]: Prompt', '[Turn 2]: Model Response', '[Turn 2]: Model Response - File [Use only when response is too long]', '[Turn 2]: Observations', '[Turn 2]: Screenshot', '[Turn 3]: Prompt Category', '[Turn 3]: Prompt', '[Turn 3]: Model Response', '[Turn 3]: Model Response - File [Use only when response is too long]', '[Turn 3]: Observations', '[Turn 3]: Screenshot', '[Turn 4]: Prompt Category', '[Turn 4]: Prompt', '[Turn 4]: Model Response', '[Turn 4]: Model Response - File [Use only when response is too long]', '[Turn 4]: Observations', '[Turn 4]: Screenshot', '[Turn 5]: Prompt Category', '[Turn 5]: Prompt', '[Turn 5]: Model Response', '[Turn 5]: Model Response - File [Use only when response is too long]', '[Turn 5]: Observations', '[Turn 5]: Screenshot', '[Turn 6]: Prompt Category', '[Turn 6]: Prompt', '[Turn 6]: Model Response', '[Turn 6]: Model Response - File [Use only when response is too long]', '[Turn 6]: Observations', '[Turn 6]: Screenshot', '[Turn 7]: Prompt Category', '[Turn 7]: Prompt', '[Turn 7]: Model Response', '[Turn 7]: Model Response - File [Use only when response is too long]', '[Turn 7]: Observations', '[Turn 7]: Screenshot', 'Context Awareness', 'Context Awareness: Errors', 'Rationale for Context Awareness', 'Output Quality', 'Output Quality: Errors', 'Rationale for Output Quality', 'Autonomy', 'Autonomy: Errors', 'Rationale for Autonomy', 'Iteration Size and Speed', 'Iteration Size and Speed: Errors', 'Rationale for Iteration Size and Speed', 'Experience', 'Experience - Flexibility, Ease of Use and Reliability: Errors', 'Rationale for Experience', 'Loom Recording Link', 'Overall Rating', 'Rationale behind the overall rating', '[Turn 1]: Final Turn?', '[Turn 2]: Final Turn?', '[Turn 3]: Final Turn?', '[Turn 4]: Final Turn?', '[Turn 5]: Final Turn?', '[Turn 6]: Final Turn?', '[Turn 7]: Final Turn?', '[Turn 1]: Turn ID', '[Turn 2]: Turn ID', '[Turn 3]: Turn ID', '[Turn 4]: Turn ID', '[Turn 5]: Turn ID', '[Turn 6]: Turn ID', '[Turn 7]: Turn ID', 'Unique ID']
+2025-03-11 22:21:41,887 - INFO - Filtered DataFrame created with 144 rows and 9 columns
+2025-03-11 22:21:41,887 - INFO - Data extraction completed successfully
