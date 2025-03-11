@@ -103,36 +103,37 @@ def extract_sheet_data():
             logger.error(f"Missing required columns: {missing_columns}")
             raise ValueError(f"Missing required columns: {missing_columns}")
         
-        filtered_df = df[required_columns]
+        # Create a copy of the filtered DataFrame to avoid SettingWithCopyWarning
+        filtered_df = df[required_columns].copy()
         logger.info(f"Filtered DataFrame created with {len(filtered_df)} rows and {len(required_columns)} columns")
         
-        # Convert rating columns to numeric
+        # Convert rating columns to numeric using .loc
         rating_columns = ['Context Awareness', 'Autonomy', 'Experience', 'Output Quality', 'Overall Rating']
         for col in rating_columns:
-            filtered_df[col] = pd.to_numeric(filtered_df[col], errors='coerce')
+            filtered_df.loc[:, col] = pd.to_numeric(filtered_df[col], errors='coerce')
             logger.info(f"Converted {col} to numeric values")
             logger.debug(f"{col} values: {filtered_df[col].describe()}")
 
-        # Calculate Mean Rating
+        # Calculate Mean Rating using .loc
         metrics_for_mean = ['Context Awareness', 'Autonomy', 'Experience', 'Output Quality']
         logger.info(f"Calculating mean rating using metrics: {metrics_for_mean}")
         
-        filtered_df['Mean Rating'] = filtered_df[metrics_for_mean].mean(axis=1)
+        filtered_df.loc[:, 'Mean Rating'] = filtered_df[metrics_for_mean].mean(axis=1)
         logger.info(f"Mean Rating statistics: \n{filtered_df['Mean Rating'].describe()}")
         
-        # Calculate difference
-        filtered_df['Difference'] = filtered_df['Mean Rating'] - filtered_df['Overall Rating']
+        # Calculate difference using .loc
+        filtered_df.loc[:, 'Difference'] = filtered_df['Mean Rating'] - filtered_df['Overall Rating']
         logger.info(f"Difference statistics: \n{filtered_df['Difference'].describe()}")
         
-        # Log counts of Ok vs Not ok results
-        result_counts = filtered_df['Result'].value_counts()
-        logger.info(f"Result distribution: \n{result_counts}")
-        
-        # Determine Result status
-        filtered_df['Result'] = filtered_df['Difference'].apply(
+        # Determine Result status before trying to count it
+        filtered_df.loc[:, 'Result'] = filtered_df['Difference'].apply(
             lambda x: 'Ok' if -1 <= x <= 1 else 'Not ok'
         )
         logger.info("Added Result status based on difference criteria")
+        
+        # Now we can safely count Results
+        result_counts = filtered_df['Result'].value_counts()
+        logger.info(f"Result distribution: \n{result_counts}")
         
         return filtered_df
         
