@@ -1,0 +1,19 @@
+[MASTER]
+disable=
+    C0111, # missing-docstring
+    C0103, # invalid-name
+    R0903, # too-few-public-methods
+    R0913, # too-many-arguments
+    W0621, # redefined-outer-name
+
+[FORMAT]
+max-line-length=120
+
+[MESSAGES CONTROL]
+disable=
+    logging-fstring-interpolation,
+    broad-except
+
+[REPORTS]
+output-format=text
+reports=yes

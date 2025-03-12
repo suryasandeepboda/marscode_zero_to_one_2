@@ -18,14 +18,17 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Add module docstring
+"""Module for handling Google Sheets data extraction and processing."""
+
 def connect_to_sheets():
+    """Establish connection to Google Sheets API."""
     logger.info("Initiating connection to Google Sheets")
     try:
-        # Update scope to allow write access
-        SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
+        scopes = ['https://www.googleapis.com/auth/spreadsheets']
         creds = service_account.Credentials.from_service_account_file(
             '/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/credentials.json', 
-            scopes=SCOPES
+            scopes=scopes
         )
         service = build('sheets', 'v4', credentials=creds)
         logger.info("Successfully connected to Google Sheets API")
@@ -35,8 +38,9 @@ def connect_to_sheets():
         raise
 
 def write_to_target_sheet(service, data):
+    """Write processed data to target Google Sheet with formatting."""
     try:
-        TARGET_SPREADSHEET_ID = '1FEqiDqqPfb9YHAWBiqVepmmXj22zNqXNNI7NLGCDVak'
+        target_spreadsheet_id = '1FEqiDqqPfb9YHAWBiqVepmmXj22zNqXNNI7NLGCDVak'
         
         # Clear existing data
         logger.info("Clearing existing data from target sheet")
@@ -146,6 +150,7 @@ def write_to_target_sheet(service, data):
         return False
 
 def extract_sheet_data():
+    """Extract and process data from source Google Sheet."""
     try:
         logger.info("Starting data extraction process")
         service = connect_to_sheets()

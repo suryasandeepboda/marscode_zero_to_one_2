@@ -4,8 +4,13 @@ import logging
 from google.oauth2 import service_account
 from extract_data import connect_to_sheets
 
+"""Unit tests for Google Sheets connection functionality."""
+
 class TestConnectToSheets(unittest.TestCase):
+    """Test cases for connect_to_sheets function."""
+    
     def setUp(self):
+        """Set up test fixtures."""
         # Configure logging for tests
         logging.basicConfig(level=logging.INFO)
         self.credentials_path = '/Users/surya.sandeep.boda/Desktop/Marscode Zero to One 2/credentials.json'
